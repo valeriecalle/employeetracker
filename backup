@@ -1,0 +1,159 @@
+  // Event view employees
+  const viewEmployees = () => {
+    console.log("hello")
+    let sql = `SELECT e.id, 
+                e.first_name, 
+                e.last_name,
+                r.title, d.department_name,
+                r.salary, m.first_name as manager
+                
+              
+                FROM employees as e  inner join role as r on (e.role_id=r.id) 
+                inner join departments as d on (e.department_id=d.id)
+                left join employees as m on (m.manager_id=e.id)
+               
+                ORDER BY e.id ASC`;
+               
+                connection.query(sql, function(err, query){
+                  console.log(err)
+                  console.table(query);
+                  startApp();
+              });
+    }
+
+
+
+
+
+    // Event view employees
+  const viewAllRoles = () => {
+    console.log("hello")
+    let sql = `SELECT role.id, 
+                role.title
+                
+              
+                FROM role
+                
+               
+               
+                ORDER BY role.id ASC`;
+               
+                connection.query(sql, function(err, query){
+                  console.log(err)
+                  console.table(query);
+                  startApp();
+              });
+    }
+
+    // Event view employees
+  const viewAllDept = () => {
+    console.log("hello")
+    let sql = `SELECT role.id, 
+                role.title
+                
+              
+                FROM role
+                
+               
+               
+                ORDER BY role.id ASC`;
+               
+                connection.query(sql, function(err, query){
+                  console.log(err)
+                  console.table(query);
+                  startApp();
+              });
+    }
+
+    // Event view employees
+  const addEmployees = () => {
+    console.log("hello")
+    let sql = `SELECT role.id, 
+                role.title
+                
+              
+                FROM role
+                
+               
+               
+                ORDER BY role.id ASC`;
+               
+                connection.query(sql, function(err, query){
+                  console.log(err)
+                  console.table(query);
+                  startApp();
+              });
+    }
+
+    // Event view employees
+  const addRole = () => {
+    console.log("hello")
+    let sql = `SELECT role.id, 
+                role.title
+                
+              
+                FROM role
+                
+               
+               
+                ORDER BY role.id ASC`;
+               
+                connection.query(sql, function(err, query){
+                  console.log(err)
+                  console.table(query);
+                  startApp();
+              });
+    }
+
+    // Event view employees
+  const addDept = () => {
+    console.log("hello")
+    let sql = `SELECT role.id, 
+                role.title
+                
+              
+                FROM role
+                
+               
+               
+                ORDER BY role.id ASC`;
+               
+                connection.query(sql, function(err, query){
+                  console.log(err)
+                  console.table(query);
+                  startApp();
+              });
+    }
+
+    // Event view employees
+  const updateEmployeesRole = () => {
+    console.log("hello")
+    let sql = `SELECT role.id, 
+                role.title
+                
+              
+                FROM role
+                
+               
+               
+                ORDER BY role.id ASC`;
+               
+                connection.query(sql, function(err, query){
+                  console.log(err)
+                  console.table(query);
+                  startApp();
+              });
+    }
+
+
+
+    let sql = `SELECT departments.id, 
+    department_name
+    FROM departments
+    ORDER BY departments.id ASC`;
+
+connection.query(sql, function (err, query) {
+console.log(err)
+console.table(query);
+startApp();
+});
